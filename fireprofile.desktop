@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=FireProfile
-Exec=fireprofile.sh %u
+Exec=fireprofile %u
 Type=Application
 Terminal=false
 MimeType=x-scheme-handler/http;x-scheme-handler/https;
