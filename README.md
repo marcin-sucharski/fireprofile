@@ -6,8 +6,8 @@ Switching profiles in Firefox is inconvenient - as a user I want to select
 which profile to start even before launching browser. Fireprofile lets you
 choose profile from list.
 
-## For whom
-Fireprofile was implemneted with minimalistic desktop environments/window managers
+## Target users
+Fireprofile was implemented with minimalistic desktop environments/window managers
 in mind. For example if you are using i3-wm and dmenu for running applications
 then Fireprofile will be perfect fit.
 
