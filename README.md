@@ -13,7 +13,7 @@ then Fireprofile will be perfect fit.
 
 ## Installation
 1. Copy `fireprofile` into a directory in your `PATH`
-2. Copy `fireprofile.desktop` into ~/.local/share/applications`.
+2. Copy `fireprofile.desktop` into `~/.local/share/applications`.
 
 Dependencies:
 - Bash
