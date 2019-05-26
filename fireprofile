@@ -1,7 +1,9 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
 FF_PROFILES_PATH=${FF_PROFILES_PATH:-$HOME/.mozilla/firefox/profiles.ini}
+FIREPROFILE_DMENU_CMD="${FIREPROFILE_DMENU_CMD:-dmenu}"
+FIREPROFILE_DMENU_OPTS=${FIREPROFILE_DMENU_OPTS:-}
 
 if [ -f $FF_PROFILES_PATH ]; then
     loaded_profiles=$(grep 'Name=' $FF_PROFILES_PATH | cut -d '=' -f 2)
@@ -10,7 +12,6 @@ else
     profiles=(default)
 fi
 
-profile_name=$(printf '%s\n' "${profiles[@]}" | dmenu)
+profile_name=$(printf '%s\n' "${profiles[@]}" | "$FIREPROFILE_DMENU_CMD" $FIREPROFILE_DMENU_OPTS)
 
 exec firefox -P $profile_name $@
-
