@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+FIREPROFILE_FF_BIN=${FIREPROFILE_FF_BIN:-firefox}
 FF_PROFILES_PATH=${FF_PROFILES_PATH:-$HOME/.mozilla/firefox/profiles.ini}
 FIREPROFILE_DMENU_CMD="${FIREPROFILE_DMENU_CMD:-dmenu}"
 FIREPROFILE_DMENU_OPTS=${FIREPROFILE_DMENU_OPTS:-}
@@ -14,4 +15,4 @@ fi
 
 profile_name=$(printf '%s\n' "${profiles[@]}" | "$FIREPROFILE_DMENU_CMD" $FIREPROFILE_DMENU_OPTS)
 
-exec firefox -P $profile_name $@
+exec "$FIREPROFILE_FF_BIN" -P $profile_name $@
